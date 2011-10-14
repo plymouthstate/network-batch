@@ -28,19 +28,11 @@ License: GPL2
 
 class S03_NetworkBatch {
 	public function __construct() {
-		add_action( 'admin_menu', array( $this, 'action_admin_menu' ) );
 		add_action( 'network_admin_menu', array( $this, 'action_network_admin_menu' ) );
-	}
-
-	public function action_admin_menu() {
-		add_plugins_page( 'Network Batch', 'Network Batch', 'network-batch', 'network_batch', array( $this, 'admin_page' ) );
 	}
 
 	public function action_network_admin_menu() {
 		add_plugins_page( 'Network Batch', 'Network Batch', 'network-batch', 'network_batch', array( $this, 'network_page' ) );
-	}
-
-	public function admin_page() {
 	}
 
 	public function network_page() {
